@@ -444,6 +444,50 @@
             text-decoration: underline;
         }
 
+        /* WhatsApp floating button styles */
+        .whatsapp-float {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 6px 18px rgba(37,211,102,0.35);
+            z-index: 200;
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 28px rgba(37,211,102,0.45);
+        }
+
+        .whatsapp-float svg {
+            width: 28px;
+            height: 28px;
+            display: block;
+        }
+
+        @media (max-width: 480px) {
+            .whatsapp-float {
+                right: 14px;
+                bottom: 14px;
+                width: 52px;
+                height: 52px;
+            }
+
+            .whatsapp-float svg {
+                width: 22px;
+                height: 22px;
+            }
+        }
+
         @keyframes slideDown {
             from {
                 opacity: 0;
@@ -827,6 +871,14 @@
             </div>
         </div>
     </footer>
+
+    <!-- WhatsApp floating button (right-bottom) -->
+    <a href="https://wa.me/918743887851?text=Hi%20there!%20I%20have%20a%20question%20about%20your%20services." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+        <!-- WhatsApp SVG icon -->
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+            <path fill="#ffffff" d="M20.52 3.48A11.9 11.9 0 0012 0C5.373 0 .002 5.373 0 12c0 2.11.55 4.18 1.6 6.01L0 24l6.25-1.63A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12 0-3.2-1.25-6.2-3.48-8.52zM12 22.1c-1.8 0-3.56-.48-5.07-1.38l-.36-.2-3.7.96.99-3.6-.23-.38A9.94 9.94 0 012 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10zm5.45-7.06c-.3-.15-1.78-.88-2.05-.98-.28-.1-.48-.15-.68.15-.2.3-.77.98-.95 1.18-.17.2-.34.22-.63.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.48-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.14.3-.34.45-.51.15-.17.2-.28.3-.47.1-.2.05-.36-.02-.51-.07-.15-.68-1.64-.93-2.25-.24-.59-.48-.51-.66-.52l-.56-.01c-.2 0-.52.07-.8.36-.28.3-1.08 1.05-1.08 2.56s1.11 2.97 1.26 3.18c.15.2 2.18 3.33 5.28 4.67 3.1 1.35 3.1.9 3.66.84.56-.06 1.78-.72 2.03-1.41.25-.69.25-1.28.17-1.41-.08-.12-.28-.18-.58-.33z"/>
+        </svg>
+    </a>
 
     <script>
         const contactForm = document.getElementById('contactForm');
