@@ -41,10 +41,11 @@
         }
 
         nav .container {max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;}
-        nav .logo{display:inline-flex;align-items:center;gap:0.8rem;font-size:1.25rem;font-weight:700;color:white;text-decoration:none}
+        nav .logo{display:inline-flex;align-items:center;gap:0.9rem;font-size:1.05rem;font-weight:700;color:white;text-decoration:none}
         .brand-badge{width:46px;height:46px;border-radius:10px;background:linear-gradient(135deg,#fff2cc,#ffd37a);display:inline-grid;place-items:center}
         nav ul{display:flex;gap:1.25rem;list-style:none}
         nav a{color:rgba(255,255,255,0.95);text-decoration:none;font-weight:600}
+        .logo .tagline{display:block;font-size:0.72rem;color:rgba(255,255,255,0.9);font-weight:500;line-height:1}
 
         .container{max-width:1200px;margin:0 auto;padding:0 2rem}
 
@@ -75,7 +76,8 @@
         .feature-item{background:rgba(255,255,255,0.03);padding:1rem;border-radius:10px}
 
         /* PRICING */
-        .pricing{padding:60px 2rem}
+        .pricing{padding:60px 2rem;margin-top:18px}
+        .pricing h2{margin-top:8px;text-align:center;font-size:1.9rem;margin-bottom:1.25rem;color:var(--primary-1)}
         .pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}
         .pricing-card{background:white;padding:1.25rem;border-radius:12px;border:1px solid rgba(102,126,234,0.08);}
         .pricing-card.featured{background:linear-gradient(135deg,var(--primary-1),var(--primary-2));color:white;border:none;transform:scale(1.03)}
@@ -99,8 +101,27 @@
     <nav>
         <div class="container">
             <a href="#" class="logo" aria-label="Software Ganes home">
-                <div class="brand-badge" aria-hidden="true">SG</div>
-                <span>Software Ganes</span>
+                <!-- Polished SVG logo: envelope + SG monogram -->
+                <div class="brand-badge" aria-hidden="true">
+                    <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Software Ganes logo">
+                        <defs>
+                            <linearGradient id="lg1" x1="0" x2="1" y1="0" y2="1">
+                                <stop offset="0" stop-color="#fff2cc"/>
+                                <stop offset="1" stop-color="#ffd37a"/>
+                            </linearGradient>
+                        </defs>
+                        <rect width="46" height="46" rx="10" fill="url(#lg1)"/>
+                        <g transform="translate(6,8)" fill="#0b1220">
+                            <path d="M2 2h28v18H2z" opacity="0.06"/>
+                            <path d="M2 2l14 10L30 2" stroke="#0b1220" stroke-width="1.6" fill="none" opacity="0.35"/>
+                        </g>
+                        <text x="23" y="33" text-anchor="middle" font-family="Segoe UI, Inter, Arial" font-weight="800" font-size="10" fill="#0b1220">SG</text>
+                    </svg>
+                </div>
+                <div>
+                    <span style="display:block">Software Ganes</span>
+                    <span class="tagline">Bulk Mailing • SMS • WhatsApp</span>
+                </div>
             </a>
 
             <ul>
@@ -269,7 +290,7 @@
     <!-- WhatsApp floating button (right-bottom) -->
     <a href="https://wa.me/918743887851?text=Hi%20there!%20I%20have%20a%20question%20about%20your%20services." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-            <path fill="#ffffff" d="M20.52 3.48A11.9 11.9 0 0012 0C5.373 0 .002 5.373 0 12c0 2.11.55 4.18 1.6 6.01L0 24l6.25-1.63A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12 0-3.2-1.25-6.2-3.48-8.52zM12 22.1c-1.8 0-3.56-.48-5.07-1.38l-.36-.2-3.7.96.99-3.6-.23-.38A9.94 9.94 0 012 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10zm5.45-7.06c-.3-.15-1.78-.88-2.05-.98-.28-.1-.48-.15-.68.15-.2.3-.77.98-.95 1.18-.17.2-.34.22-.63.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.48-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.14.3-.34.45-.51.15-.17.2-.28.3-.47.1-.2.05-.36-.02-.51-.07-.15-.68-1.64-.93-2.25-.24-.59-.48-.51-.66-.52l-.56-.01c-.2 0-.52.07-.8.36-.28.3-1.08 1.05-1.08 2.56s1.11 2.97 1.26 3.18c.15.2 2.18 3.33 5.28 4.67 3.1 1.35 3.1.9 3.66.84.56-.06 1.78-.72 2.03-1.41.25-.69.25-1.28.17-1.41-.08-.12-.28-.18-.58-.33z"/>
+            <path fill="#ffffff" d="M20.52 3.48A11.9 11.9 0 0012 0C5.373 0 .002 5.373 0 12c0 2.11.55 4.18 1.6 6.01L0 24l6.25-1.63A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12 0-3.2-1.25-6.2-3.48-8.52zM12 22.1c-1.8 0-3.56-.48-5.07-1.38l-.36-.2-3.7.96.99-3.6-.23-.38A9.94 9.94 0 012 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10zm5.45-7.06c-.3-.15-1.78-.88-2.05-.98-.28-.1-.48-.15-.68.15-.2.3-.77.98-.95 1.18-.17.2-.34.22-.63.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.48-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.14.3-.34.45-.51.15-.17.2-.28.3-.47.10-.2.05-.36-.02-.51-.07-.15-.68-1.64-.93-2.25-.24-.59-.48-.51-.66-.52l-.56-.01c-.2 0-.52.07-.8.36-.28.3-1.08 1.05-1.08 2.56s1.11 2.97 1.26 3.18c.15.2 2.18 3.33 5.28 4.67 3.1 1.35 3.1.9 3.66.84.56-.06 1.78-.72 2.03-1.41.25-.69.25-1.28.17-1.41-.08-.12-.28-.18-.58-.33z"/>
         </svg>
     </a>
 
